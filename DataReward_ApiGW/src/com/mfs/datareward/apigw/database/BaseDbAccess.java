@@ -7,6 +7,7 @@ package com.mfs.datareward.apigw.database;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.mchange.v2.c3p0.DataSources;
+import java.beans.PropertyVetoException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
@@ -60,7 +61,7 @@ public abstract class BaseDbAccess {
             cpds.setPassword(password);
 
             return cpds;
-        } catch (Exception e) {
+        } catch (PropertyVetoException | NumberFormatException e) {
             LOGGER.error("", e);
             return null;
         }
