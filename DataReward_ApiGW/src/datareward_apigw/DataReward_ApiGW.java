@@ -16,6 +16,8 @@ public class DataReward_ApiGW {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println("Hellow World!!!");
+        System.out.println("I am APIG_W");
     }
     
 }
